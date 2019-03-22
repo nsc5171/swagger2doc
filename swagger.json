@@ -1,0 +1,2369 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "hasOne",
+        "description": "hasOne"
+    },
+    "basePath": "/api",
+    "paths": {
+        "/Users/{id}/accessTokens/{fk}": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Find a related item by id for accessTokens.",
+                "operationId": "User.prototype.__findById__accessTokens",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "User id",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    },
+                    {
+                        "name": "fk",
+                        "in": "path",
+                        "description": "Foreign key for accessTokens",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/AccessToken"
+                        }
+                    }
+                },
+                "deprecated": false
+            },
+            "delete": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Delete a related item by id for accessTokens.",
+                "operationId": "User.prototype.__destroyById__accessTokens",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "User id",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    },
+                    {
+                        "name": "fk",
+                        "in": "path",
+                        "description": "Foreign key for accessTokens",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Request was successful"
+                    }
+                },
+                "deprecated": false
+            },
+            "put": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Update a related item by id for accessTokens.",
+                "operationId": "User.prototype.__updateById__accessTokens",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "User id",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    },
+                    {
+                        "name": "fk",
+                        "in": "path",
+                        "description": "Foreign key for accessTokens",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    },
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/AccessToken"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/AccessToken"
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Users/{id}/accessTokens": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Queries accessTokens of User.",
+                "operationId": "User.prototype.__get__accessTokens",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "User id",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    },
+                    {
+                        "name": "filter",
+                        "in": "query",
+                        "required": false,
+                        "type": "string",
+                        "format": "JSON"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/AccessToken"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            },
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Creates a new instance in accessTokens of this model.",
+                "operationId": "User.prototype.__create__accessTokens",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "User id",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    },
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/AccessToken"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/AccessToken"
+                        }
+                    }
+                },
+                "deprecated": false
+            },
+            "delete": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Deletes all accessTokens of this model.",
+                "operationId": "User.prototype.__delete__accessTokens",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "User id",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Request was successful"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Users/{id}/accessTokens/count": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Counts accessTokens of User.",
+                "operationId": "User.prototype.__count__accessTokens",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "User id",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    },
+                    {
+                        "name": "where",
+                        "in": "query",
+                        "description": "Criteria to match model instances",
+                        "required": false,
+                        "type": "string",
+                        "format": "JSON"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "count": {
+                                    "type": "number",
+                                    "format": "double"
+                                }
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Users": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Create a new instance of the model and persist it into the data source.",
+                "operationId": "User.create",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "description": "Model instance data",
+                        "required": false,
+                        "schema": {
+                            "description": "Model instance data",
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                },
+                "deprecated": false
+            },
+            "put": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Patch an existing model instance or insert a new one into the data source.",
+                "operationId": "User.upsert__put_Users",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "description": "Model instance data",
+                        "required": false,
+                        "schema": {
+                            "description": "Model instance data",
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                },
+                "deprecated": false
+            },
+            "patch": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Patch an existing model instance or insert a new one into the data source.",
+                "operationId": "User.upsert__patch_Users",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "description": "Model instance data",
+                        "required": false,
+                        "schema": {
+                            "description": "Model instance data",
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                },
+                "deprecated": false
+            },
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Find all instances of the model matched by filter from the data source.",
+                "operationId": "User.find",
+                "parameters": [
+                    {
+                        "name": "filter",
+                        "in": "query",
+                        "description": "Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({\"something\":\"value\"})",
+                        "required": false,
+                        "type": "string",
+                        "format": "JSON"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/User"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Users/replaceOrCreate": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Replace an existing model instance or insert a new one into the data source.",
+                "operationId": "User.replaceOrCreate",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "description": "Model instance data",
+                        "required": false,
+                        "schema": {
+                            "description": "Model instance data",
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Users/upsertWithWhere": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Update an existing model instance or insert a new one into the data source based on the where criteria.",
+                "operationId": "User.upsertWithWhere",
+                "parameters": [
+                    {
+                        "name": "where",
+                        "in": "query",
+                        "description": "Criteria to match model instances",
+                        "required": false,
+                        "type": "string",
+                        "format": "JSON"
+                    },
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "description": "An object of model property name/value pairs",
+                        "required": false,
+                        "schema": {
+                            "description": "An object of model property name/value pairs",
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Users/{id}/exists": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Check whether a model instance exists in the data source.",
+                "operationId": "User.exists__get_Users_{id}_exists",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Model id",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "exists": {
+                                    "type": "boolean"
+                                }
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Users/{id}": {
+            "head": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Check whether a model instance exists in the data source.",
+                "operationId": "User.exists__head_Users_{id}",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Model id",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "exists": {
+                                    "type": "boolean"
+                                }
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            },
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Find a model instance by {{id}} from the data source.",
+                "operationId": "User.findById",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Model id",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    },
+                    {
+                        "name": "filter",
+                        "in": "query",
+                        "description": "Filter defining fields and include - must be a JSON-encoded string ({\"something\":\"value\"})",
+                        "required": false,
+                        "type": "string",
+                        "format": "JSON"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                },
+                "deprecated": false
+            },
+            "delete": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Delete a model instance by {{id}} from the data source.",
+                "operationId": "User.deleteById",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Model id",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                },
+                "deprecated": false
+            },
+            "put": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Patch attributes for a model instance and persist it into the data source.",
+                "operationId": "User.prototype.updateAttributes__put_Users_{id}",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "User id",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    },
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "description": "An object of model property name/value pairs",
+                        "required": false,
+                        "schema": {
+                            "description": "An object of model property name/value pairs",
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                },
+                "deprecated": false
+            },
+            "patch": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Patch attributes for a model instance and persist it into the data source.",
+                "operationId": "User.prototype.updateAttributes__patch_Users_{id}",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "User id",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    },
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "description": "An object of model property name/value pairs",
+                        "required": false,
+                        "schema": {
+                            "description": "An object of model property name/value pairs",
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Users/{id}/replace": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Replace attributes for a model instance and persist it into the data source.",
+                "operationId": "User.replaceById",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Model id",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    },
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "description": "Model instance data",
+                        "required": false,
+                        "schema": {
+                            "description": "Model instance data",
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Users/findOne": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Find first instance of the model matched by filter from the data source.",
+                "operationId": "User.findOne",
+                "parameters": [
+                    {
+                        "name": "filter",
+                        "in": "query",
+                        "description": "Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({\"something\":\"value\"})",
+                        "required": false,
+                        "type": "string",
+                        "format": "JSON"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Users/update": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Update instances of the model matched by {{where}} from the data source.",
+                "operationId": "User.updateAll",
+                "parameters": [
+                    {
+                        "name": "where",
+                        "in": "query",
+                        "description": "Criteria to match model instances",
+                        "required": false,
+                        "type": "string",
+                        "format": "JSON"
+                    },
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "description": "An object of model property name/value pairs",
+                        "required": false,
+                        "schema": {
+                            "description": "An object of model property name/value pairs",
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "description": "Information related to the outcome of the operation",
+                            "type": "object",
+                            "properties": {
+                                "count": {
+                                    "description": "The number of instances updated",
+                                    "type": "number",
+                                    "format": "double"
+                                }
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Users/count": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Count instances of the model matched by where from the data source.",
+                "operationId": "User.count",
+                "parameters": [
+                    {
+                        "name": "where",
+                        "in": "query",
+                        "description": "Criteria to match model instances",
+                        "required": false,
+                        "type": "string",
+                        "format": "JSON"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "count": {
+                                    "type": "number",
+                                    "format": "double"
+                                }
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Users/change-stream": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Create a change stream.",
+                "operationId": "User.createChangeStream__post_Users_change-stream",
+                "parameters": [
+                    {
+                        "name": "options",
+                        "in": "formData",
+                        "required": false,
+                        "type": "string",
+                        "format": "JSON"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "type": "file"
+                        }
+                    }
+                },
+                "deprecated": false
+            },
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Create a change stream.",
+                "operationId": "User.createChangeStream__get_Users_change-stream",
+                "parameters": [
+                    {
+                        "name": "options",
+                        "in": "query",
+                        "required": false,
+                        "type": "string",
+                        "format": "JSON"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "type": "file"
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Users/login": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Login a user with username/email and password.",
+                "operationId": "User.login",
+                "parameters": [
+                    {
+                        "name": "credentials",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object"
+                        }
+                    },
+                    {
+                        "name": "include",
+                        "in": "query",
+                        "description": "Related objects to include in the response. See the description of return value for more details.",
+                        "required": false,
+                        "type": "string",
+                        "format": "JSON"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "description": "The response body contains properties of the AccessToken created on login.\nDepending on the value of `include` parameter, the body may contain additional properties:\n\n  - `user` - `U+007BUserU+007D` - Data of the currently logged in user. (`include=user`)\n\n",
+                            "type": "object"
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Users/logout": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Logout a user with access token.",
+                "operationId": "User.logout",
+                "parameters": [],
+                "responses": {
+                    "204": {
+                        "description": "Request was successful"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Users/confirm": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Confirm a user registration with email verification token.",
+                "operationId": "User.confirm",
+                "parameters": [
+                    {
+                        "name": "uid",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "redirect",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Request was successful"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Users/reset": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Reset password for a user with email.",
+                "operationId": "User.resetPassword",
+                "parameters": [
+                    {
+                        "name": "options",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Request was successful"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Applicants/{id}/retail": {
+            "get": {
+                "tags": [
+                    "Applicant"
+                ],
+                "summary": "Fetches hasOne relation retail.",
+                "operationId": "Applicant.prototype.__get__retail",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Applicant id",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    },
+                    {
+                        "name": "refresh",
+                        "in": "query",
+                        "required": false,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/Retail"
+                        }
+                    }
+                },
+                "deprecated": false
+            },
+            "post": {
+                "tags": [
+                    "Applicant"
+                ],
+                "summary": "Creates a new instance in retail of this model.",
+                "operationId": "Applicant.prototype.__create__retail",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Applicant id",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    },
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/Retail"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/Retail"
+                        }
+                    }
+                },
+                "deprecated": false
+            },
+            "put": {
+                "tags": [
+                    "Applicant"
+                ],
+                "summary": "Update retail of this model.",
+                "operationId": "Applicant.prototype.__update__retail",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Applicant id",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    },
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/Retail"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/Retail"
+                        }
+                    }
+                },
+                "deprecated": false
+            },
+            "delete": {
+                "tags": [
+                    "Applicant"
+                ],
+                "summary": "Deletes retail of this model.",
+                "operationId": "Applicant.prototype.__destroy__retail",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Applicant id",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Request was successful"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Applicants": {
+            "post": {
+                "tags": [
+                    "Applicant"
+                ],
+                "summary": "Create a new instance of the model and persist it into the data source.",
+                "operationId": "Applicant.create",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "description": "Model instance data",
+                        "required": false,
+                        "schema": {
+                            "description": "Model instance data",
+                            "$ref": "#/definitions/Applicant"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/Applicant"
+                        }
+                    }
+                },
+                "deprecated": false
+            },
+            "put": {
+                "tags": [
+                    "Applicant"
+                ],
+                "summary": "Patch an existing model instance or insert a new one into the data source.",
+                "operationId": "Applicant.upsert__put_Applicants",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "description": "Model instance data",
+                        "required": false,
+                        "schema": {
+                            "description": "Model instance data",
+                            "$ref": "#/definitions/Applicant"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/Applicant"
+                        }
+                    }
+                },
+                "deprecated": false
+            },
+            "patch": {
+                "tags": [
+                    "Applicant"
+                ],
+                "summary": "Patch an existing model instance or insert a new one into the data source.",
+                "operationId": "Applicant.upsert__patch_Applicants",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "description": "Model instance data",
+                        "required": false,
+                        "schema": {
+                            "description": "Model instance data",
+                            "$ref": "#/definitions/Applicant"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/Applicant"
+                        }
+                    }
+                },
+                "deprecated": false
+            },
+            "get": {
+                "tags": [
+                    "Applicant"
+                ],
+                "summary": "Find all instances of the model matched by filter from the data source.",
+                "operationId": "Applicant.find",
+                "parameters": [
+                    {
+                        "name": "filter",
+                        "in": "query",
+                        "description": "Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({\"something\":\"value\"})",
+                        "required": false,
+                        "type": "string",
+                        "format": "JSON"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Applicant"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Applicants/replaceOrCreate": {
+            "post": {
+                "tags": [
+                    "Applicant"
+                ],
+                "summary": "Replace an existing model instance or insert a new one into the data source.",
+                "operationId": "Applicant.replaceOrCreate",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "description": "Model instance data",
+                        "required": false,
+                        "schema": {
+                            "description": "Model instance data",
+                            "$ref": "#/definitions/Applicant"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/Applicant"
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Applicants/upsertWithWhere": {
+            "post": {
+                "tags": [
+                    "Applicant"
+                ],
+                "summary": "Update an existing model instance or insert a new one into the data source based on the where criteria.",
+                "operationId": "Applicant.upsertWithWhere",
+                "parameters": [
+                    {
+                        "name": "where",
+                        "in": "query",
+                        "description": "Criteria to match model instances",
+                        "required": false,
+                        "type": "string",
+                        "format": "JSON"
+                    },
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "description": "An object of model property name/value pairs",
+                        "required": false,
+                        "schema": {
+                            "description": "An object of model property name/value pairs",
+                            "$ref": "#/definitions/Applicant"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/Applicant"
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Applicants/{id}/exists": {
+            "get": {
+                "tags": [
+                    "Applicant"
+                ],
+                "summary": "Check whether a model instance exists in the data source.",
+                "operationId": "Applicant.exists__get_Applicants_{id}_exists",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Model id",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "exists": {
+                                    "type": "boolean"
+                                }
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Applicants/{id}": {
+            "head": {
+                "tags": [
+                    "Applicant"
+                ],
+                "summary": "Check whether a model instance exists in the data source.",
+                "operationId": "Applicant.exists__head_Applicants_{id}",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Model id",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "exists": {
+                                    "type": "boolean"
+                                }
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            },
+            "get": {
+                "tags": [
+                    "Applicant"
+                ],
+                "summary": "Find a model instance by {{id}} from the data source.",
+                "operationId": "Applicant.findById",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Model id",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    },
+                    {
+                        "name": "filter",
+                        "in": "query",
+                        "description": "Filter defining fields and include - must be a JSON-encoded string ({\"something\":\"value\"})",
+                        "required": false,
+                        "type": "string",
+                        "format": "JSON"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/Applicant"
+                        }
+                    }
+                },
+                "deprecated": false
+            },
+            "delete": {
+                "tags": [
+                    "Applicant"
+                ],
+                "summary": "Delete a model instance by {{id}} from the data source.",
+                "operationId": "Applicant.deleteById",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Model id",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                },
+                "deprecated": false
+            },
+            "put": {
+                "tags": [
+                    "Applicant"
+                ],
+                "summary": "Patch attributes for a model instance and persist it into the data source.",
+                "operationId": "Applicant.prototype.updateAttributes__put_Applicants_{id}",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Applicant id",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    },
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "description": "An object of model property name/value pairs",
+                        "required": false,
+                        "schema": {
+                            "description": "An object of model property name/value pairs",
+                            "$ref": "#/definitions/Applicant"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/Applicant"
+                        }
+                    }
+                },
+                "deprecated": false
+            },
+            "patch": {
+                "tags": [
+                    "Applicant"
+                ],
+                "summary": "Patch attributes for a model instance and persist it into the data source.",
+                "operationId": "Applicant.prototype.updateAttributes__patch_Applicants_{id}",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Applicant id",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    },
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "description": "An object of model property name/value pairs",
+                        "required": false,
+                        "schema": {
+                            "description": "An object of model property name/value pairs",
+                            "$ref": "#/definitions/Applicant"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/Applicant"
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Applicants/{id}/replace": {
+            "post": {
+                "tags": [
+                    "Applicant"
+                ],
+                "summary": "Replace attributes for a model instance and persist it into the data source.",
+                "operationId": "Applicant.replaceById",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Model id",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    },
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "description": "Model instance data",
+                        "required": false,
+                        "schema": {
+                            "description": "Model instance data",
+                            "$ref": "#/definitions/Applicant"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/Applicant"
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Applicants/findOne": {
+            "get": {
+                "tags": [
+                    "Applicant"
+                ],
+                "summary": "Find first instance of the model matched by filter from the data source.",
+                "operationId": "Applicant.findOne",
+                "parameters": [
+                    {
+                        "name": "filter",
+                        "in": "query",
+                        "description": "Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({\"something\":\"value\"})",
+                        "required": false,
+                        "type": "string",
+                        "format": "JSON"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/Applicant"
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Applicants/update": {
+            "post": {
+                "tags": [
+                    "Applicant"
+                ],
+                "summary": "Update instances of the model matched by {{where}} from the data source.",
+                "operationId": "Applicant.updateAll",
+                "parameters": [
+                    {
+                        "name": "where",
+                        "in": "query",
+                        "description": "Criteria to match model instances",
+                        "required": false,
+                        "type": "string",
+                        "format": "JSON"
+                    },
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "description": "An object of model property name/value pairs",
+                        "required": false,
+                        "schema": {
+                            "description": "An object of model property name/value pairs",
+                            "$ref": "#/definitions/Applicant"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "description": "Information related to the outcome of the operation",
+                            "type": "object",
+                            "properties": {
+                                "count": {
+                                    "description": "The number of instances updated",
+                                    "type": "number",
+                                    "format": "double"
+                                }
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Applicants/count": {
+            "get": {
+                "tags": [
+                    "Applicant"
+                ],
+                "summary": "Count instances of the model matched by where from the data source.",
+                "operationId": "Applicant.count",
+                "parameters": [
+                    {
+                        "name": "where",
+                        "in": "query",
+                        "description": "Criteria to match model instances",
+                        "required": false,
+                        "type": "string",
+                        "format": "JSON"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "count": {
+                                    "type": "number",
+                                    "format": "double"
+                                }
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Applicants/change-stream": {
+            "post": {
+                "tags": [
+                    "Applicant"
+                ],
+                "summary": "Create a change stream.",
+                "operationId": "Applicant.createChangeStream__post_Applicants_change-stream",
+                "parameters": [
+                    {
+                        "name": "options",
+                        "in": "formData",
+                        "required": false,
+                        "type": "string",
+                        "format": "JSON"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "type": "file"
+                        }
+                    }
+                },
+                "deprecated": false
+            },
+            "get": {
+                "tags": [
+                    "Applicant"
+                ],
+                "summary": "Create a change stream.",
+                "operationId": "Applicant.createChangeStream__get_Applicants_change-stream",
+                "parameters": [
+                    {
+                        "name": "options",
+                        "in": "query",
+                        "required": false,
+                        "type": "string",
+                        "format": "JSON"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "type": "file"
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Retails": {
+            "post": {
+                "tags": [
+                    "Retail"
+                ],
+                "summary": "Create a new instance of the model and persist it into the data source.",
+                "operationId": "Retail.create",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "description": "Model instance data",
+                        "required": false,
+                        "schema": {
+                            "description": "Model instance data",
+                            "$ref": "#/definitions/Retail"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/Retail"
+                        }
+                    }
+                },
+                "deprecated": false
+            },
+            "put": {
+                "tags": [
+                    "Retail"
+                ],
+                "summary": "Patch an existing model instance or insert a new one into the data source.",
+                "operationId": "Retail.upsert__put_Retails",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "description": "Model instance data",
+                        "required": false,
+                        "schema": {
+                            "description": "Model instance data",
+                            "$ref": "#/definitions/Retail"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/Retail"
+                        }
+                    }
+                },
+                "deprecated": false
+            },
+            "patch": {
+                "tags": [
+                    "Retail"
+                ],
+                "summary": "Patch an existing model instance or insert a new one into the data source.",
+                "operationId": "Retail.upsert__patch_Retails",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "description": "Model instance data",
+                        "required": false,
+                        "schema": {
+                            "description": "Model instance data",
+                            "$ref": "#/definitions/Retail"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/Retail"
+                        }
+                    }
+                },
+                "deprecated": false
+            },
+            "get": {
+                "tags": [
+                    "Retail"
+                ],
+                "summary": "Find all instances of the model matched by filter from the data source.",
+                "operationId": "Retail.find",
+                "parameters": [
+                    {
+                        "name": "filter",
+                        "in": "query",
+                        "description": "Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({\"something\":\"value\"})",
+                        "required": false,
+                        "type": "string",
+                        "format": "JSON"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Retail"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Retails/replaceOrCreate": {
+            "post": {
+                "tags": [
+                    "Retail"
+                ],
+                "summary": "Replace an existing model instance or insert a new one into the data source.",
+                "operationId": "Retail.replaceOrCreate",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "description": "Model instance data",
+                        "required": false,
+                        "schema": {
+                            "description": "Model instance data",
+                            "$ref": "#/definitions/Retail"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/Retail"
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Retails/upsertWithWhere": {
+            "post": {
+                "tags": [
+                    "Retail"
+                ],
+                "summary": "Update an existing model instance or insert a new one into the data source based on the where criteria.",
+                "operationId": "Retail.upsertWithWhere",
+                "parameters": [
+                    {
+                        "name": "where",
+                        "in": "query",
+                        "description": "Criteria to match model instances",
+                        "required": false,
+                        "type": "string",
+                        "format": "JSON"
+                    },
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "description": "An object of model property name/value pairs",
+                        "required": false,
+                        "schema": {
+                            "description": "An object of model property name/value pairs",
+                            "$ref": "#/definitions/Retail"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/Retail"
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Retails/{id}/exists": {
+            "get": {
+                "tags": [
+                    "Retail"
+                ],
+                "summary": "Check whether a model instance exists in the data source.",
+                "operationId": "Retail.exists__get_Retails_{id}_exists",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Model id",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "exists": {
+                                    "type": "boolean"
+                                }
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Retails/{id}": {
+            "head": {
+                "tags": [
+                    "Retail"
+                ],
+                "summary": "Check whether a model instance exists in the data source.",
+                "operationId": "Retail.exists__head_Retails_{id}",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Model id",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "exists": {
+                                    "type": "boolean"
+                                }
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            },
+            "get": {
+                "tags": [
+                    "Retail"
+                ],
+                "summary": "Find a model instance by {{id}} from the data source.",
+                "operationId": "Retail.findById",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Model id",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    },
+                    {
+                        "name": "filter",
+                        "in": "query",
+                        "description": "Filter defining fields and include - must be a JSON-encoded string ({\"something\":\"value\"})",
+                        "required": false,
+                        "type": "string",
+                        "format": "JSON"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/Retail"
+                        }
+                    }
+                },
+                "deprecated": false
+            },
+            "delete": {
+                "tags": [
+                    "Retail"
+                ],
+                "summary": "Delete a model instance by {{id}} from the data source.",
+                "operationId": "Retail.deleteById",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Model id",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                },
+                "deprecated": false
+            },
+            "put": {
+                "tags": [
+                    "Retail"
+                ],
+                "summary": "Patch attributes for a model instance and persist it into the data source.",
+                "operationId": "Retail.prototype.updateAttributes__put_Retails_{id}",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Retail id",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    },
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "description": "An object of model property name/value pairs",
+                        "required": false,
+                        "schema": {
+                            "description": "An object of model property name/value pairs",
+                            "$ref": "#/definitions/Retail"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/Retail"
+                        }
+                    }
+                },
+                "deprecated": false
+            },
+            "patch": {
+                "tags": [
+                    "Retail"
+                ],
+                "summary": "Patch attributes for a model instance and persist it into the data source.",
+                "operationId": "Retail.prototype.updateAttributes__patch_Retails_{id}",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Retail id",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    },
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "description": "An object of model property name/value pairs",
+                        "required": false,
+                        "schema": {
+                            "description": "An object of model property name/value pairs",
+                            "$ref": "#/definitions/Retail"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/Retail"
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Retails/{id}/replace": {
+            "post": {
+                "tags": [
+                    "Retail"
+                ],
+                "summary": "Replace attributes for a model instance and persist it into the data source.",
+                "operationId": "Retail.replaceById",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Model id",
+                        "required": true,
+                        "type": "string",
+                        "format": "JSON"
+                    },
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "description": "Model instance data",
+                        "required": false,
+                        "schema": {
+                            "description": "Model instance data",
+                            "$ref": "#/definitions/Retail"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/Retail"
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Retails/findOne": {
+            "get": {
+                "tags": [
+                    "Retail"
+                ],
+                "summary": "Find first instance of the model matched by filter from the data source.",
+                "operationId": "Retail.findOne",
+                "parameters": [
+                    {
+                        "name": "filter",
+                        "in": "query",
+                        "description": "Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({\"something\":\"value\"})",
+                        "required": false,
+                        "type": "string",
+                        "format": "JSON"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "$ref": "#/definitions/Retail"
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Retails/update": {
+            "post": {
+                "tags": [
+                    "Retail"
+                ],
+                "summary": "Update instances of the model matched by {{where}} from the data source.",
+                "operationId": "Retail.updateAll",
+                "parameters": [
+                    {
+                        "name": "where",
+                        "in": "query",
+                        "description": "Criteria to match model instances",
+                        "required": false,
+                        "type": "string",
+                        "format": "JSON"
+                    },
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "description": "An object of model property name/value pairs",
+                        "required": false,
+                        "schema": {
+                            "description": "An object of model property name/value pairs",
+                            "$ref": "#/definitions/Retail"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "description": "Information related to the outcome of the operation",
+                            "type": "object",
+                            "properties": {
+                                "count": {
+                                    "description": "The number of instances updated",
+                                    "type": "number",
+                                    "format": "double"
+                                }
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Retails/count": {
+            "get": {
+                "tags": [
+                    "Retail"
+                ],
+                "summary": "Count instances of the model matched by where from the data source.",
+                "operationId": "Retail.count",
+                "parameters": [
+                    {
+                        "name": "where",
+                        "in": "query",
+                        "description": "Criteria to match model instances",
+                        "required": false,
+                        "type": "string",
+                        "format": "JSON"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "count": {
+                                    "type": "number",
+                                    "format": "double"
+                                }
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/Retails/change-stream": {
+            "post": {
+                "tags": [
+                    "Retail"
+                ],
+                "summary": "Create a change stream.",
+                "operationId": "Retail.createChangeStream__post_Retails_change-stream",
+                "parameters": [
+                    {
+                        "name": "options",
+                        "in": "formData",
+                        "required": false,
+                        "type": "string",
+                        "format": "JSON"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "type": "file"
+                        }
+                    }
+                },
+                "deprecated": false
+            },
+            "get": {
+                "tags": [
+                    "Retail"
+                ],
+                "summary": "Create a change stream.",
+                "operationId": "Retail.createChangeStream__get_Retails_change-stream",
+                "parameters": [
+                    {
+                        "name": "options",
+                        "in": "query",
+                        "required": false,
+                        "type": "string",
+                        "format": "JSON"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Request was successful",
+                        "schema": {
+                            "type": "file"
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "User"
+        },
+        {
+            "name": "Applicant"
+        },
+        {
+            "name": "Retail"
+        }
+    ],
+    "consumes": [
+        "application/json",
+        "application/x-www-form-urlencoded",
+        "application/xml",
+        "text/xml"
+    ],
+    "produces": [
+        "application/json",
+        "application/xml",
+        "text/xml",
+        "application/javascript",
+        "text/javascript"
+    ],
+    "definitions": {
+        "x-any": {
+            "properties": {}
+        },
+        "AccessToken": {
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "ttl": {
+                    "default": 1209600,
+                    "description": "time to live in seconds (2 weeks by default)",
+                    "type": "number",
+                    "format": "double"
+                },
+                "created": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "userId": {
+                    "$ref": "#/definitions/ObjectID"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "additionalProperties": false
+        },
+        "User": {
+            "properties": {
+                "realm": {
+                    "type": "string"
+                },
+                "username": {
+                    "type": "string"
+                },
+                "credentials": {
+                    "type": "object"
+                },
+                "challenges": {
+                    "type": "object"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "emailVerified": {
+                    "type": "boolean"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "created": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "lastUpdated": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "id": {
+                    "$ref": "#/definitions/ObjectID"
+                }
+            },
+            "required": [
+                "email"
+            ],
+            "additionalProperties": false
+        },
+        "Retail": {
+            "properties": {
+                "cifID": {
+                    "type": "string"
+                },
+                "firstName": {
+                    "type": "string"
+                },
+                "middleName": {
+                    "type": "string"
+                },
+                "lastName": {
+                    "type": "string"
+                },
+                "id": {
+                    "$ref": "#/definitions/ObjectID"
+                }
+            },
+            "required": [
+                "cifID"
+            ],
+            "additionalProperties": false
+        },
+        "Applicant": {
+            "properties": {
+                "applicantID": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "id": {
+                    "$ref": "#/definitions/ObjectID"
+                }
+            },
+            "required": [
+                "applicantID"
+            ],
+            "additionalProperties": false
+        },
+        "ObjectID": {
+            "type": "string",
+            "pattern": "^[a-fA-F\\d]{24}$"
+        }
+    }
+}

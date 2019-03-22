@@ -1,0 +1,2442 @@
+= hasOne
+
+
+[[_overview]]
+== Overview
+hasOne
+
+
+=== Version information
+[%hardbreaks]
+__Version__ : 1.0.0
+
+
+=== URI scheme
+[%hardbreaks]
+__BasePath__ : /api
+
+
+=== Tags
+
+* Applicant
+* Retail
+* User
+
+
+=== Consumes
+
+* `application/json`
+* `application/x-www-form-urlencoded`
+* `application/xml`
+* `text/xml`
+
+
+=== Produces
+
+* `application/json`
+* `application/xml`
+* `text/xml`
+* `application/javascript`
+* `text/javascript`
+
+
+
+
+[[_applicant]]
+=== Applicant
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**applicantID** +
+__required__|string
+|**id** +
+__optional__|<<_objectid,ObjectID>>
+|**status** +
+__optional__|string
+|===
+
+
+[[_objectid]]
+=== ObjectID
+__Type__ : string
+
+
+[[_retail]]
+=== Retail
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**cifID** +
+__required__|string
+|**firstName** +
+__optional__|string
+|**id** +
+__optional__|<<_objectid,ObjectID>>
+|**lastName** +
+__optional__|string
+|**middleName** +
+__optional__|string
+|===
+
+
+[[_user]]
+=== User
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**challenges** +
+__optional__|object
+|**created** +
+__optional__|string (date-time)
+|**credentials** +
+__optional__|object
+|**email** +
+__required__|string
+|**emailVerified** +
+__optional__|boolean
+|**id** +
+__optional__|<<_objectid,ObjectID>>
+|**lastUpdated** +
+__optional__|string (date-time)
+|**realm** +
+__optional__|string
+|**status** +
+__optional__|string
+|**username** +
+__optional__|string
+|===
+
+
+[[_x-any]]
+=== x-any
+
+
+
+[[_paths]]
+== Paths
+
+[[_applicant_create]]
+=== Create a new instance of the model and persist it into the data source.
+....
+POST /Applicants
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**data** +
+__optional__|Model instance data|<<_applicant,Applicant>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_applicant,Applicant>>
+|===
+
+
+==== Tags
+
+* Applicant
+
+
+[[_applicant_find]]
+=== Find all instances of the model matched by filter from the data source.
+....
+GET /Applicants
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**filter** +
+__optional__|Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})|string (JSON)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|< <<_applicant,Applicant>> > array
+|===
+
+
+==== Tags
+
+* Applicant
+
+
+[[_applicant_upsert_put_applicants]]
+=== Patch an existing model instance or insert a new one into the data source.
+....
+PUT /Applicants
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**data** +
+__optional__|Model instance data|<<_applicant,Applicant>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_applicant,Applicant>>
+|===
+
+
+==== Tags
+
+* Applicant
+
+
+[[_applicant_upsert_patch_applicants]]
+=== Patch an existing model instance or insert a new one into the data source.
+....
+PATCH /Applicants
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**data** +
+__optional__|Model instance data|<<_applicant,Applicant>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_applicant,Applicant>>
+|===
+
+
+==== Tags
+
+* Applicant
+
+
+[[_applicant_createchangestream_post_applicants_change-stream]]
+=== Create a change stream.
+....
+POST /Applicants/change-stream
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^4a"]
+|===
+|Type|Name|Schema
+|**FormData**|**options** +
+__optional__|string (JSON)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|file
+|===
+
+
+==== Tags
+
+* Applicant
+
+
+[[_applicant_createchangestream_get_applicants_change-stream]]
+=== Create a change stream.
+....
+GET /Applicants/change-stream
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^4a"]
+|===
+|Type|Name|Schema
+|**Query**|**options** +
+__optional__|string (JSON)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|file
+|===
+
+
+==== Tags
+
+* Applicant
+
+
+[[_applicant_count]]
+=== Count instances of the model matched by where from the data source.
+....
+GET /Applicants/count
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**where** +
+__optional__|Criteria to match model instances|string (JSON)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_applicant_count_response_200,Response 200>>
+|===
+
+[[_applicant_count_response_200]]
+**Response 200**
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**count** +
+__optional__|number (double)
+|===
+
+
+==== Tags
+
+* Applicant
+
+
+[[_applicant_findone]]
+=== Find first instance of the model matched by filter from the data source.
+....
+GET /Applicants/findOne
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**filter** +
+__optional__|Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})|string (JSON)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_applicant,Applicant>>
+|===
+
+
+==== Tags
+
+* Applicant
+
+
+[[_applicant_replaceorcreate]]
+=== Replace an existing model instance or insert a new one into the data source.
+....
+POST /Applicants/replaceOrCreate
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**data** +
+__optional__|Model instance data|<<_applicant,Applicant>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_applicant,Applicant>>
+|===
+
+
+==== Tags
+
+* Applicant
+
+
+[[_applicant_updateall]]
+=== Update instances of the model matched by {{where}} from the data source.
+....
+POST /Applicants/update
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**where** +
+__optional__|Criteria to match model instances|string (JSON)
+|**Body**|**data** +
+__optional__|An object of model property name/value pairs|<<_applicant,Applicant>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_applicant_updateall_response_200,Response 200>>
+|===
+
+[[_applicant_updateall_response_200]]
+**Response 200**
+
+[options="header", cols=".^3a,.^11a,.^4a"]
+|===
+|Name|Description|Schema
+|**count** +
+__optional__|The number of instances updated|number (double)
+|===
+
+
+==== Tags
+
+* Applicant
+
+
+[[_applicant_upsertwithwhere]]
+=== Update an existing model instance or insert a new one into the data source based on the where criteria.
+....
+POST /Applicants/upsertWithWhere
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**where** +
+__optional__|Criteria to match model instances|string (JSON)
+|**Body**|**data** +
+__optional__|An object of model property name/value pairs|<<_applicant,Applicant>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_applicant,Applicant>>
+|===
+
+
+==== Tags
+
+* Applicant
+
+
+[[_applicant_findbyid]]
+=== Find a model instance by {{id}} from the data source.
+....
+GET /Applicants/{id}
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|Model id|string (JSON)
+|**Query**|**filter** +
+__optional__|Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})|string (JSON)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_applicant,Applicant>>
+|===
+
+
+==== Tags
+
+* Applicant
+
+
+[[_applicant_prototype_updateattributes_put_applicants_id]]
+=== Patch attributes for a model instance and persist it into the data source.
+....
+PUT /Applicants/{id}
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|Applicant id|string (JSON)
+|**Body**|**data** +
+__optional__|An object of model property name/value pairs|<<_applicant,Applicant>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_applicant,Applicant>>
+|===
+
+
+==== Tags
+
+* Applicant
+
+
+[[_applicant_deletebyid]]
+=== Delete a model instance by {{id}} from the data source.
+....
+DELETE /Applicants/{id}
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|Model id|string (JSON)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|object
+|===
+
+
+==== Tags
+
+* Applicant
+
+
+[[_applicant_prototype_updateattributes_patch_applicants_id]]
+=== Patch attributes for a model instance and persist it into the data source.
+....
+PATCH /Applicants/{id}
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|Applicant id|string (JSON)
+|**Body**|**data** +
+__optional__|An object of model property name/value pairs|<<_applicant,Applicant>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_applicant,Applicant>>
+|===
+
+
+==== Tags
+
+* Applicant
+
+
+[[_applicant_exists_head_applicants_id]]
+=== Check whether a model instance exists in the data source.
+....
+HEAD /Applicants/{id}
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|Model id|string (JSON)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_applicant_exists_head_applicants_id_response_200,Response 200>>
+|===
+
+[[_applicant_exists_head_applicants_id_response_200]]
+**Response 200**
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**exists** +
+__optional__|boolean
+|===
+
+
+==== Tags
+
+* Applicant
+
+
+[[_applicant_exists_get_applicants_id_exists]]
+=== Check whether a model instance exists in the data source.
+....
+GET /Applicants/{id}/exists
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|Model id|string (JSON)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_applicant_exists_get_applicants_id_exists_response_200,Response 200>>
+|===
+
+[[_applicant_exists_get_applicants_id_exists_response_200]]
+**Response 200**
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**exists** +
+__optional__|boolean
+|===
+
+
+==== Tags
+
+* Applicant
+
+
+[[_applicant_replacebyid]]
+=== Replace attributes for a model instance and persist it into the data source.
+....
+POST /Applicants/{id}/replace
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|Model id|string (JSON)
+|**Body**|**data** +
+__optional__|Model instance data|<<_applicant,Applicant>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_applicant,Applicant>>
+|===
+
+
+==== Tags
+
+* Applicant
+
+
+[[_applicant_prototype_create_retail]]
+=== Creates a new instance in retail of this model.
+....
+POST /Applicants/{id}/retail
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|Applicant id|string (JSON)
+|**Body**|**data** +
+__optional__||<<_retail,Retail>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_retail,Retail>>
+|===
+
+
+==== Tags
+
+* Applicant
+
+
+[[_applicant_prototype_get_retail]]
+=== Fetches hasOne relation retail.
+....
+GET /Applicants/{id}/retail
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|Applicant id|string (JSON)
+|**Query**|**refresh** +
+__optional__||boolean
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_retail,Retail>>
+|===
+
+
+==== Tags
+
+* Applicant
+
+
+[[_applicant_prototype_update_retail]]
+=== Update retail of this model.
+....
+PUT /Applicants/{id}/retail
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|Applicant id|string (JSON)
+|**Body**|**data** +
+__optional__||<<_retail,Retail>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_retail,Retail>>
+|===
+
+
+==== Tags
+
+* Applicant
+
+
+[[_applicant_prototype_destroy_retail]]
+=== Deletes retail of this model.
+....
+DELETE /Applicants/{id}/retail
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|Applicant id|string (JSON)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**204**|Request was successful|No Content
+|===
+
+
+==== Tags
+
+* Applicant
+
+
+[[_retail_create]]
+=== Create a new instance of the model and persist it into the data source.
+....
+POST /Retails
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**data** +
+__optional__|Model instance data|<<_retail,Retail>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_retail,Retail>>
+|===
+
+
+==== Tags
+
+* Retail
+
+
+[[_retail_find]]
+=== Find all instances of the model matched by filter from the data source.
+....
+GET /Retails
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**filter** +
+__optional__|Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})|string (JSON)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|< <<_retail,Retail>> > array
+|===
+
+
+==== Tags
+
+* Retail
+
+
+[[_retail_upsert_put_retails]]
+=== Patch an existing model instance or insert a new one into the data source.
+....
+PUT /Retails
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**data** +
+__optional__|Model instance data|<<_retail,Retail>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_retail,Retail>>
+|===
+
+
+==== Tags
+
+* Retail
+
+
+[[_retail_upsert_patch_retails]]
+=== Patch an existing model instance or insert a new one into the data source.
+....
+PATCH /Retails
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**data** +
+__optional__|Model instance data|<<_retail,Retail>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_retail,Retail>>
+|===
+
+
+==== Tags
+
+* Retail
+
+
+[[_retail_createchangestream_post_retails_change-stream]]
+=== Create a change stream.
+....
+POST /Retails/change-stream
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^4a"]
+|===
+|Type|Name|Schema
+|**FormData**|**options** +
+__optional__|string (JSON)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|file
+|===
+
+
+==== Tags
+
+* Retail
+
+
+[[_retail_createchangestream_get_retails_change-stream]]
+=== Create a change stream.
+....
+GET /Retails/change-stream
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^4a"]
+|===
+|Type|Name|Schema
+|**Query**|**options** +
+__optional__|string (JSON)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|file
+|===
+
+
+==== Tags
+
+* Retail
+
+
+[[_retail_count]]
+=== Count instances of the model matched by where from the data source.
+....
+GET /Retails/count
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**where** +
+__optional__|Criteria to match model instances|string (JSON)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_retail_count_response_200,Response 200>>
+|===
+
+[[_retail_count_response_200]]
+**Response 200**
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**count** +
+__optional__|number (double)
+|===
+
+
+==== Tags
+
+* Retail
+
+
+[[_retail_findone]]
+=== Find first instance of the model matched by filter from the data source.
+....
+GET /Retails/findOne
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**filter** +
+__optional__|Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})|string (JSON)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_retail,Retail>>
+|===
+
+
+==== Tags
+
+* Retail
+
+
+[[_retail_replaceorcreate]]
+=== Replace an existing model instance or insert a new one into the data source.
+....
+POST /Retails/replaceOrCreate
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**data** +
+__optional__|Model instance data|<<_retail,Retail>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_retail,Retail>>
+|===
+
+
+==== Tags
+
+* Retail
+
+
+[[_retail_updateall]]
+=== Update instances of the model matched by {{where}} from the data source.
+....
+POST /Retails/update
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**where** +
+__optional__|Criteria to match model instances|string (JSON)
+|**Body**|**data** +
+__optional__|An object of model property name/value pairs|<<_retail,Retail>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_retail_updateall_response_200,Response 200>>
+|===
+
+[[_retail_updateall_response_200]]
+**Response 200**
+
+[options="header", cols=".^3a,.^11a,.^4a"]
+|===
+|Name|Description|Schema
+|**count** +
+__optional__|The number of instances updated|number (double)
+|===
+
+
+==== Tags
+
+* Retail
+
+
+[[_retail_upsertwithwhere]]
+=== Update an existing model instance or insert a new one into the data source based on the where criteria.
+....
+POST /Retails/upsertWithWhere
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**where** +
+__optional__|Criteria to match model instances|string (JSON)
+|**Body**|**data** +
+__optional__|An object of model property name/value pairs|<<_retail,Retail>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_retail,Retail>>
+|===
+
+
+==== Tags
+
+* Retail
+
+
+[[_retail_findbyid]]
+=== Find a model instance by {{id}} from the data source.
+....
+GET /Retails/{id}
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|Model id|string (JSON)
+|**Query**|**filter** +
+__optional__|Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})|string (JSON)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_retail,Retail>>
+|===
+
+
+==== Tags
+
+* Retail
+
+
+[[_retail_prototype_updateattributes_put_retails_id]]
+=== Patch attributes for a model instance and persist it into the data source.
+....
+PUT /Retails/{id}
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|Retail id|string (JSON)
+|**Body**|**data** +
+__optional__|An object of model property name/value pairs|<<_retail,Retail>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_retail,Retail>>
+|===
+
+
+==== Tags
+
+* Retail
+
+
+[[_retail_deletebyid]]
+=== Delete a model instance by {{id}} from the data source.
+....
+DELETE /Retails/{id}
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|Model id|string (JSON)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|object
+|===
+
+
+==== Tags
+
+* Retail
+
+
+[[_retail_prototype_updateattributes_patch_retails_id]]
+=== Patch attributes for a model instance and persist it into the data source.
+....
+PATCH /Retails/{id}
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|Retail id|string (JSON)
+|**Body**|**data** +
+__optional__|An object of model property name/value pairs|<<_retail,Retail>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_retail,Retail>>
+|===
+
+
+==== Tags
+
+* Retail
+
+
+[[_retail_exists_head_retails_id]]
+=== Check whether a model instance exists in the data source.
+....
+HEAD /Retails/{id}
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|Model id|string (JSON)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_retail_exists_head_retails_id_response_200,Response 200>>
+|===
+
+[[_retail_exists_head_retails_id_response_200]]
+**Response 200**
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**exists** +
+__optional__|boolean
+|===
+
+
+==== Tags
+
+* Retail
+
+
+[[_retail_exists_get_retails_id_exists]]
+=== Check whether a model instance exists in the data source.
+....
+GET /Retails/{id}/exists
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|Model id|string (JSON)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_retail_exists_get_retails_id_exists_response_200,Response 200>>
+|===
+
+[[_retail_exists_get_retails_id_exists_response_200]]
+**Response 200**
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**exists** +
+__optional__|boolean
+|===
+
+
+==== Tags
+
+* Retail
+
+
+[[_retail_replacebyid]]
+=== Replace attributes for a model instance and persist it into the data source.
+....
+POST /Retails/{id}/replace
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|Model id|string (JSON)
+|**Body**|**data** +
+__optional__|Model instance data|<<_retail,Retail>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_retail,Retail>>
+|===
+
+
+==== Tags
+
+* Retail
+
+
+[[_user_create]]
+=== Create a new instance of the model and persist it into the data source.
+....
+POST /Users
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**data** +
+__optional__|Model instance data|<<_user,User>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_user,User>>
+|===
+
+
+==== Tags
+
+* User
+
+
+[[_user_find]]
+=== Find all instances of the model matched by filter from the data source.
+....
+GET /Users
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**filter** +
+__optional__|Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})|string (JSON)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|< <<_user,User>> > array
+|===
+
+
+==== Tags
+
+* User
+
+
+[[_user_upsert_put_users]]
+=== Patch an existing model instance or insert a new one into the data source.
+....
+PUT /Users
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**data** +
+__optional__|Model instance data|<<_user,User>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_user,User>>
+|===
+
+
+==== Tags
+
+* User
+
+
+[[_user_upsert_patch_users]]
+=== Patch an existing model instance or insert a new one into the data source.
+....
+PATCH /Users
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**data** +
+__optional__|Model instance data|<<_user,User>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_user,User>>
+|===
+
+
+==== Tags
+
+* User
+
+
+[[_user_createchangestream_post_users_change-stream]]
+=== Create a change stream.
+....
+POST /Users/change-stream
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^4a"]
+|===
+|Type|Name|Schema
+|**FormData**|**options** +
+__optional__|string (JSON)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|file
+|===
+
+
+==== Tags
+
+* User
+
+
+[[_user_createchangestream_get_users_change-stream]]
+=== Create a change stream.
+....
+GET /Users/change-stream
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^4a"]
+|===
+|Type|Name|Schema
+|**Query**|**options** +
+__optional__|string (JSON)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|file
+|===
+
+
+==== Tags
+
+* User
+
+
+[[_user_confirm]]
+=== Confirm a user registration with email verification token.
+....
+GET /Users/confirm
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^4a"]
+|===
+|Type|Name|Schema
+|**Query**|**redirect** +
+__optional__|string
+|**Query**|**token** +
+__required__|string
+|**Query**|**uid** +
+__required__|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**204**|Request was successful|No Content
+|===
+
+
+==== Tags
+
+* User
+
+
+[[_user_count]]
+=== Count instances of the model matched by where from the data source.
+....
+GET /Users/count
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**where** +
+__optional__|Criteria to match model instances|string (JSON)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_user_count_response_200,Response 200>>
+|===
+
+[[_user_count_response_200]]
+**Response 200**
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**count** +
+__optional__|number (double)
+|===
+
+
+==== Tags
+
+* User
+
+
+[[_user_findone]]
+=== Find first instance of the model matched by filter from the data source.
+....
+GET /Users/findOne
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**filter** +
+__optional__|Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})|string (JSON)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_user,User>>
+|===
+
+
+==== Tags
+
+* User
+
+
+[[_user_login]]
+=== Login a user with username/email and password.
+....
+POST /Users/login
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**include** +
+__optional__|Related objects to include in the response. See the description of return value for more details.|string (JSON)
+|**Body**|**credentials** +
+__required__||object
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|object
+|===
+
+
+==== Tags
+
+* User
+
+
+[[_user_logout]]
+=== Logout a user with access token.
+....
+POST /Users/logout
+....
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**204**|Request was successful|No Content
+|===
+
+
+==== Tags
+
+* User
+
+
+[[_user_replaceorcreate]]
+=== Replace an existing model instance or insert a new one into the data source.
+....
+POST /Users/replaceOrCreate
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**data** +
+__optional__|Model instance data|<<_user,User>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_user,User>>
+|===
+
+
+==== Tags
+
+* User
+
+
+[[_user_resetpassword]]
+=== Reset password for a user with email.
+....
+POST /Users/reset
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^4a"]
+|===
+|Type|Name|Schema
+|**Body**|**options** +
+__required__|object
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**204**|Request was successful|No Content
+|===
+
+
+==== Tags
+
+* User
+
+
+[[_user_updateall]]
+=== Update instances of the model matched by {{where}} from the data source.
+....
+POST /Users/update
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**where** +
+__optional__|Criteria to match model instances|string (JSON)
+|**Body**|**data** +
+__optional__|An object of model property name/value pairs|<<_user,User>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_user_updateall_response_200,Response 200>>
+|===
+
+[[_user_updateall_response_200]]
+**Response 200**
+
+[options="header", cols=".^3a,.^11a,.^4a"]
+|===
+|Name|Description|Schema
+|**count** +
+__optional__|The number of instances updated|number (double)
+|===
+
+
+==== Tags
+
+* User
+
+
+[[_user_upsertwithwhere]]
+=== Update an existing model instance or insert a new one into the data source based on the where criteria.
+....
+POST /Users/upsertWithWhere
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**where** +
+__optional__|Criteria to match model instances|string (JSON)
+|**Body**|**data** +
+__optional__|An object of model property name/value pairs|<<_user,User>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_user,User>>
+|===
+
+
+==== Tags
+
+* User
+
+
+[[_user_findbyid]]
+=== Find a model instance by {{id}} from the data source.
+....
+GET /Users/{id}
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|Model id|string (JSON)
+|**Query**|**filter** +
+__optional__|Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})|string (JSON)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_user,User>>
+|===
+
+
+==== Tags
+
+* User
+
+
+[[_user_prototype_updateattributes_put_users_id]]
+=== Patch attributes for a model instance and persist it into the data source.
+....
+PUT /Users/{id}
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|User id|string (JSON)
+|**Body**|**data** +
+__optional__|An object of model property name/value pairs|<<_user,User>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_user,User>>
+|===
+
+
+==== Tags
+
+* User
+
+
+[[_user_deletebyid]]
+=== Delete a model instance by {{id}} from the data source.
+....
+DELETE /Users/{id}
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|Model id|string (JSON)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|object
+|===
+
+
+==== Tags
+
+* User
+
+
+[[_user_prototype_updateattributes_patch_users_id]]
+=== Patch attributes for a model instance and persist it into the data source.
+....
+PATCH /Users/{id}
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|User id|string (JSON)
+|**Body**|**data** +
+__optional__|An object of model property name/value pairs|<<_user,User>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_user,User>>
+|===
+
+
+==== Tags
+
+* User
+
+
+[[_user_exists_head_users_id]]
+=== Check whether a model instance exists in the data source.
+....
+HEAD /Users/{id}
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|Model id|string (JSON)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_user_exists_head_users_id_response_200,Response 200>>
+|===
+
+[[_user_exists_head_users_id_response_200]]
+**Response 200**
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**exists** +
+__optional__|boolean
+|===
+
+
+==== Tags
+
+* User
+
+
+[[_user_prototype_create_accesstokens]]
+=== Creates a new instance in accessTokens of this model.
+....
+POST /Users/{id}/accessTokens
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|User id|string (JSON)
+|**Body**|**data** +
+__optional__||<<_accesstoken,AccessToken>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_accesstoken,AccessToken>>
+|===
+
+
+==== Tags
+
+* User
+
+
+[[_user_prototype_get_accesstokens]]
+=== Queries accessTokens of User.
+....
+GET /Users/{id}/accessTokens
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|User id|string (JSON)
+|**Query**|**filter** +
+__optional__||string (JSON)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|< <<_accesstoken,AccessToken>> > array
+|===
+
+
+==== Tags
+
+* User
+
+
+[[_user_prototype_delete_accesstokens]]
+=== Deletes all accessTokens of this model.
+....
+DELETE /Users/{id}/accessTokens
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|User id|string (JSON)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**204**|Request was successful|No Content
+|===
+
+
+==== Tags
+
+* User
+
+
+[[_user_prototype_count_accesstokens]]
+=== Counts accessTokens of User.
+....
+GET /Users/{id}/accessTokens/count
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|User id|string (JSON)
+|**Query**|**where** +
+__optional__|Criteria to match model instances|string (JSON)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_user_prototype_count_accesstokens_response_200,Response 200>>
+|===
+
+[[_user_prototype_count_accesstokens_response_200]]
+**Response 200**
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**count** +
+__optional__|number (double)
+|===
+
+
+==== Tags
+
+* User
+
+
+[[_user_prototype_findbyid_accesstokens]]
+=== Find a related item by id for accessTokens.
+....
+GET /Users/{id}/accessTokens/{fk}
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**fk** +
+__required__|Foreign key for accessTokens|string (JSON)
+|**Path**|**id** +
+__required__|User id|string (JSON)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_accesstoken,AccessToken>>
+|===
+
+
+==== Tags
+
+* User
+
+
+[[_user_prototype_updatebyid_accesstokens]]
+=== Update a related item by id for accessTokens.
+....
+PUT /Users/{id}/accessTokens/{fk}
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**fk** +
+__required__|Foreign key for accessTokens|string (JSON)
+|**Path**|**id** +
+__required__|User id|string (JSON)
+|**Body**|**data** +
+__optional__||<<_accesstoken,AccessToken>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_accesstoken,AccessToken>>
+|===
+
+
+==== Tags
+
+* User
+
+
+[[_user_prototype_destroybyid_accesstokens]]
+=== Delete a related item by id for accessTokens.
+....
+DELETE /Users/{id}/accessTokens/{fk}
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**fk** +
+__required__|Foreign key for accessTokens|string (JSON)
+|**Path**|**id** +
+__required__|User id|string (JSON)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**204**|Request was successful|No Content
+|===
+
+
+==== Tags
+
+* User
+
+
+[[_user_exists_get_users_id_exists]]
+=== Check whether a model instance exists in the data source.
+....
+GET /Users/{id}/exists
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|Model id|string (JSON)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_user_exists_get_users_id_exists_response_200,Response 200>>
+|===
+
+[[_user_exists_get_users_id_exists_response_200]]
+**Response 200**
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**exists** +
+__optional__|boolean
+|===
+
+
+==== Tags
+
+* User
+
+
+[[_user_replacebyid]]
+=== Replace attributes for a model instance and persist it into the data source.
+....
+POST /Users/{id}/replace
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|Model id|string (JSON)
+|**Body**|**data** +
+__optional__|Model instance data|<<_user,User>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Request was successful|<<_user,User>>
+|===
+
+
+==== Tags
+
+* User
+
+
+
