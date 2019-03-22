@@ -7,13 +7,13 @@
 
 
 === Version information
-{{LINEBREAK}}
+[%hardbreaks]
 __Version__ : {{info.version}}
 
 
 === URI scheme
-{{LINEBREAK}}
-__BasePath__ : {{info.basePath}}
+[%hardbreaks]
+__BasePath__ : {{basePath}}
 
 
 === Tags
@@ -34,5 +34,29 @@ __BasePath__ : {{info.basePath}}
 
 {{#each consumes}}
  * {{.}}
+{{/each}}
+
+
+
+{{#each definitions}}
+{{#if this.properties}}
+[[_{{@key}}]]
+=== {{@key}}
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+{{#each properties}}
+|**{{@key}}**|{{#if type}}{{type}}{{else}}<<_{{ref $ref}},{{ref $ref}}>>{{/if}}
+{{/each}}
+|===
+{{else}}
+[[_{{@key}}]]
+=== {{@key}}
+{{#each this}}
+__{{@key}}__ : {{this}}
+
+{{/each}}
+{{/if}}
 {{/each}}
 
