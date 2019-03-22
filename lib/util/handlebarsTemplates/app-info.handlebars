@@ -18,27 +18,21 @@ __BasePath__ : {{info.basePath}}
 
 === Tags
 
-<ul>
-{{#tags}}
-<li> * {{name}}</li>
-</ul>
-
+{{#each tags}}
+ * {{name}}
+{{/each}}
 
 === Consumes
 
 
-<ul>
-{{#consumes}}
-<li> * {{.}}</li>
-</ul>
-
+{{#each consumes}}
+ * {{.}}
+{{/each}}
 
 === Produces
 
 
-<ul>
-{{#consumes}}
-<li> * {{.}}</li>
-</ul>
-
+{{#each consumes}}
+ * {{.}}
+{{/each}}
 
