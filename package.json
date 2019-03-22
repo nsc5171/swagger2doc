@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/nsc5171/swagger2doc/issues"
   },
-  "homepage": "https://github.com/nsc5171/swagger2doc#readme"
+  "homepage": "https://github.com/nsc5171/swagger2doc#readme",
+  "dependencies": {
+    "asciidoctor.js": "^1.5.9"
+  }
 }
