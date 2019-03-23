@@ -67,7 +67,8 @@ __{{@key}}__ : {{this}}
 
 {{#each paths}}
 {{#each this}}
-[[_{{operationId}}]]
+[[_{{anchor operationId}}]]
+
 === {{summary}}
 ....
 {{toUpperCase @key}} {{@../key}}
@@ -100,7 +101,7 @@ __{{#if required}}required{{else}}optional{{/if}}__|{{schema.description}}{{type
 ==== Tags
 
 {{#each tags}}
-* {{this}}
+* <<_{{this}},{{this}}>>
 {{/each}}
 
 
