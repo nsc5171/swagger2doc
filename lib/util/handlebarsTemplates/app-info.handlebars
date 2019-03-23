@@ -93,17 +93,17 @@ __{{#if required}}required{{else}}optional{{/if}}__|{{schema.description}}{{type
 |===
 |HTTP Code|Description|Schema
 {{#each responses}}
-|**{{@key}}**|{{description}}|{{#if format}}{{format}}{{else}}<<_{{ref schema.$ref}},{{ref schema.$ref}}>>  {{schema.type}}{{/if}}
+|**{{@key}}**|{{description}}|{{#if format}}{{format}}{{else}}{{respSchema schema}}{{/if}}
 {{/each}}
 |===
 
 
-==== Tags
+{{!-- ==== Tags
 
 {{#each tags}}
 * <<_{{this}},{{this}}>>
 {{/each}}
-
+ --}}
 
 
 {{/each}}
