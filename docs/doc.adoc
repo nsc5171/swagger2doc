@@ -16,30 +16,6 @@ __Version__ : 1.0.0
 __BasePath__ : /api
 
 
-=== Tags
-
- * User
- * Applicant
- * Retail
-
-=== Consumes
-
-
- * `application/json`
- * `application/x-www-form-urlencoded`
- * `application/xml`
- * `text/xml`
-
-=== Produces
-
-
- * `application/json`
- * `application/xml`
- * `text/xml`
- * `application/javascript`
- * `text/javascript`
-
-
 
 [[_x-any]]
 === x-any
