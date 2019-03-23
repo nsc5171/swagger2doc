@@ -26,14 +26,14 @@ __BasePath__ : {{basePath}}
 
 
 {{#each consumes}}
- * {{.}}
+ * `{{.}}`
 {{/each}}
 
 === Produces
 
 
-{{#each consumes}}
- * {{.}}
+{{#each produces}}
+ * `{{.}}`
 {{/each}}
 
 
@@ -43,6 +43,7 @@ __BasePath__ : {{basePath}}
 [[_{{@key}}]]
 === {{@key}}
 
+{{#IF (objLength this.properties) '>' 0}}
 [options="header", cols=".^3a,.^4a"]
 |===
 |Name|Schema
@@ -50,6 +51,7 @@ __BasePath__ : {{basePath}}
 |**{{@key}}**|{{#if type}}{{type}}{{else}}<<_{{ref $ref}},{{ref $ref}}>>{{/if}}
 {{/each}}
 |===
+{{/IF}}
 {{else}}
 [[_{{@key}}]]
 === {{@key}}
